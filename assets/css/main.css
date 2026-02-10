@@ -11624,7 +11624,7 @@ body::before, body::after {
   content: "";
   width: 216px;
   height: 216px;
-  background-color: var(--main-600);
+  background-color: #0046BF;
   border-radius: 50%;
   filter: blur(450px);
   top: 264px;
@@ -11633,7 +11633,7 @@ body::before, body::after {
 }
 
 body::after {
-  background-color: var(--main-two-600);
+  background-color: #0046BF;
   inset-inline-start: auto;
   inset-inline-end: 0;
   top: 0%;
@@ -11646,7 +11646,7 @@ body::after {
   content: "";
   width: 216px;
   height: 216px;
-  background-color: #FEC533;
+  background-color: #0046BF;
   border-radius: 50%;
   filter: blur(450px);
   top: 48px;
@@ -11952,7 +11952,7 @@ body::after {
   height: 50%;
   inset-inline-start: 0;
   bottom: 0;
-  background-color: var(--main-25);
+  background-color: #0046BF;
   z-index: -1;
 }
 
