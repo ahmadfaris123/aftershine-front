@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Aftershine</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/AFTERSHINE_LOGOGRAM_WHITE.png"
+    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- select2 -->
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!-- jquery-ui -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <!-- plyr Css -->
+    <link rel="stylesheet" href="assets/css/plyr.css" />
+    <!-- Editor js Toolbar Start -->
+    <link rel="stylesheet" href="assets/css/editor-quill.css" />
+    <!-- animate -->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <!-- dataTables.dataTables -->
+    <link rel="stylesheet" href="assets/css/dataTables.dataTables.min.css" />
+
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      @font-face {
+        font-family: 'JMH Typewriter';
+        src: url('assets/JMH Typewriter.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+      :root {
+        --body-font: 'JMH Typewriter', monospace;
+      }
+      body { 
+        font-family: 'JMH Typewriter', monospace; 
+      }
+      html { scroll-behavior: smooth; }
+      .header { transition: all 0.3s ease; background-color: #000000 !important; padding: 15px 0 !important; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+      .nav-link, .navbar-brand, h1, h2, h3, h4, h5, h6, .section-heading h2, .footer-item__title { font-family: "Open Sans", sans-serif !important; }
+      .nav-link { font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; position: relative; padding-bottom: 5px; }
+      .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 50%; background-color: #ffb83c; transition: all 0.3s ease; transform: translateX(-50%); }
+      .nav-link:hover::after { width: 100%; }
+      .nav-link:hover { color: #ffb83c !important; }
+    </style>
+  </head>
+  <body>
+    <!--==================== Overlay Start ====================-->
+    <div class="overlay"></div>
+    <!--==================== Overlay End ====================-->
+
+    <!--==================== Sidebar Overlay End ====================-->
+    <div class="side-overlay"></div>
+    <!--==================== Sidebar Overlay End ====================-->
+
+    <!-- ==================== Scroll to Top End Here ==================== -->
+    <div class="progress-wrap" style="color: white">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- ==================== Scroll to Top End Here ==================== -->
+
+    <!-- ========================= Header Section Start =============================== -->
+    <header class="header position-fixed w-100" style="top: 0; left: 0; padding: 15px 0; z-index: 9999;">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-0">
+          <a class="navbar-brand" href="#home">
+            <img src="assets/images/logo-light.png" alt="Logo" style="max-height: 40px; object-fit: contain;">
+          </a>
+          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav gap-2 gap-lg-5" style="font-size: 13px;">
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#profile">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#personel">Personel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#music">Originals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#events">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#awards">Awards</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-none d-lg-flex align-items-center gap-3">
+              <a href="#" class="text-white hover-text-main-600 transition-1"><i class="ph ph-user" style="font-size: 24px;"></i></a>
+              
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- ========================= Header Section End =============================== -->
+
+    <!-- ================================ About Section Start ==================================== -->
+    <section id="music" class="choose-us pt-120 position-relative z-1 bg-white" style="background-color: #ffffff;">
+
+        <div class="container">
+            <div class="section-heading text-center mb-32">
+                <h2 class="mb-0 wow bounceIn" style="color: #ffb83c">Our Originals.</h2>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mb-24" data-aos="fade-up">
+                <h4 class="mb-0" style="font-weight: 600; font-size: 20px;">Video Lainnya</h4>
+                <a href="https://www.youtube.com/@aftershineofficial" target="_blank" class="btn rounded-pill flex-align gap-8 fw-semibold transition-2" style="background-color: #000000; color: #fff; padding: 10px 24px; font-size: 14px;">
+                    <i class="ph-fill ph-play-circle text-xl"></i> Tonton di Youtube
+                </a>
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 d-flex flex-column">
+                        <div class="rounded-12 overflow-hidden position-relative" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="erfHfqTgMc8">
+                            <img src="https://img.youtube.com/vi/erfHfqTgMc8/hqdefault.jpg" alt="Dada" class="scale-hover-item__img rounded-12 cover-img transition-2 w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <i class="ph-fill ph-play-circle text-white" style="font-size: 3rem; filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));"></i>
+                            </div>
+                        </div>
+                        <div class="p-16 pt-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-8" style="font-size: 16px;">
+                                <span class="link text-line-2">Dada</span>
+                            </h5>
+                            <div class="flex-align gap-8 mb-16">
+                                <span class="text-neutral-500 text-lg d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                <span class="text-neutral-500" style="font-size: 13px;">13 Juni 2025</span>
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <a href="https://youtu.be/erfHfqTgMc8" target="_blank" class="btn w-100 rounded-pill fw-semibold transition-2 flex-center gap-8" style="background-color: #000000; color: #fff; font-size: 13px; padding: 10px 0;">
+                                    Tonton di Youtube <i class="ph-bold ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 d-flex flex-column">
+                        <div class="rounded-12 overflow-hidden position-relative" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="o1gSJKCmJH8">
+                            <img src="https://img.youtube.com/vi/o1gSJKCmJH8/hqdefault.jpg" alt="Matursuwun Gusti" class="scale-hover-item__img rounded-12 cover-img transition-2 w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <i class="ph-fill ph-play-circle text-white" style="font-size: 3rem; filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));"></i>
+                            </div>
+                        </div>
+                        <div class="p-16 pt-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-8" style="font-size: 16px;">
+                                <span class="link text-line-2">Matursuwun Gusti</span>
+                            </h5>
+                            <div class="flex-align gap-8 mb-16">
+                                <span class="text-neutral-500 text-lg d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                <span class="text-neutral-500" style="font-size: 13px;">14 Jan 2025</span>
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <a href="https://youtu.be/o1gSJKCmJH8" target="_blank" class="btn w-100 rounded-pill fw-semibold transition-2 flex-center gap-8" style="background-color: #000000; color: #fff; font-size: 13px; padding: 10px 0;">
+                                    Tonton di Youtube <i class="ph-bold ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 d-flex flex-column">
+                        <div class="rounded-12 overflow-hidden position-relative" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="DKC4vtUAlaA">
+                            <img src="https://img.youtube.com/vi/DKC4vtUAlaA/hqdefault.jpg" alt="ALL IN FOR YOU" class="scale-hover-item__img rounded-12 cover-img transition-2 w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <i class="ph-fill ph-play-circle text-white" style="font-size: 3rem; filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));"></i>
+                            </div>
+                        </div>
+                        <div class="p-16 pt-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-8" style="font-size: 16px;">
+                                <span class="link text-line-2">ALL IN FOR YOU</span>
+                            </h5>
+                            <div class="flex-align gap-8 mb-16">
+                                <span class="text-neutral-500 text-lg d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                <span class="text-neutral-500" style="font-size: 13px;">9 Agu 2024</span>
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <a href="https://youtu.be/DKC4vtUAlaA" target="_blank" class="btn w-100 rounded-pill fw-semibold transition-2 flex-center gap-8" style="background-color: #000000; color: #fff; font-size: 13px; padding: 10px 0;">
+                                    Tonton di Youtube <i class="ph-bold ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 d-flex flex-column">
+                        <div class="rounded-12 overflow-hidden position-relative" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="Y-i0c6F1R6c">
+                            <img src="https://img.youtube.com/vi/Y-i0c6F1R6c/hqdefault.jpg" alt="Kalah" class="scale-hover-item__img rounded-12 cover-img transition-2 w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <i class="ph-fill ph-play-circle text-white" style="font-size: 3rem; filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));"></i>
+                            </div>
+                        </div>
+                        <div class="p-16 pt-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-8" style="font-size: 16px;">
+                                <span class="link text-line-2">Kalah</span>
+                            </h5>
+                            <div class="flex-align gap-8 mb-16">
+                                <span class="text-neutral-500 text-lg d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                <span class="text-neutral-500" style="font-size: 13px;">10 Jul 2024</span>
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <a href="https://youtu.be/Y-i0c6F1R6c" target="_blank" class="btn w-100 rounded-pill fw-semibold transition-2 flex-center gap-8" style="background-color: #000000; color: #fff; font-size: 13px; padding: 10px 0;">
+                                    Tonton di Youtube <i class="ph-bold ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 d-flex flex-column">
+                        <div class="rounded-12 overflow-hidden position-relative" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="YwV_rJ7YqC4">
+                            <img src="https://img.youtube.com/vi/YwV_rJ7YqC4/hqdefault.jpg" alt="Kalah 2" class="scale-hover-item__img rounded-12 cover-img transition-2 w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <i class="ph-fill ph-play-circle text-white" style="font-size: 3rem; filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));"></i>
+                            </div>
+                        </div>
+                        <div class="p-16 pt-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-8" style="font-size: 16px;">
+                                <span class="link text-line-2">Kalah 2</span>
+                            </h5>
+                            <div class="flex-align gap-8 mb-16">
+                                <span class="text-neutral-500 text-lg d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                <span class="text-neutral-500" style="font-size: 13px;">15 Agu 2024</span>
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <a href="https://youtu.be/YwV_rJ7YqC4" target="_blank" class="btn w-100 rounded-pill fw-semibold transition-2 flex-center gap-8" style="background-color: #000000; color: #fff; font-size: 13px; padding: 10px 0;">
+                                    Tonton di Youtube <i class="ph-bold ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 d-flex flex-column">
+                        <div class="rounded-12 overflow-hidden position-relative" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="9t_v_s_V-lU">
+                            <img src="https://img.youtube.com/vi/9t_v_s_V-lU/hqdefault.jpg" alt="Tutupono" class="scale-hover-item__img rounded-12 cover-img transition-2 w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <i class="ph-fill ph-play-circle text-white" style="font-size: 3rem; filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));"></i>
+                            </div>
+                        </div>
+                        <div class="p-16 pt-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-8" style="font-size: 16px;">
+                                <span class="link text-line-2">Tutupono</span>
+                            </h5>
+                            <div class="flex-align gap-8 mb-16">
+                                <span class="text-neutral-500 text-lg d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                <span class="text-neutral-500" style="font-size: 13px;">12 Sep 2024</span>
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <a href="https://youtu.be/9t_v_s_V-lU" target="_blank" class="btn w-100 rounded-pill fw-semibold transition-2 flex-center gap-8" style="background-color: #000000; color: #fff; font-size: 13px; padding: 10px 0;">
+                                    Tonton di Youtube <i class="ph-bold ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 d-flex flex-column">
+                        <div class="rounded-12 overflow-hidden position-relative" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="tU5v9wX2x8z">
+                            <img src="https://img.youtube.com/vi/tU5v9wX2x8z/hqdefault.jpg" alt="Legan" class="scale-hover-item__img rounded-12 cover-img transition-2 w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <i class="ph-fill ph-play-circle text-white" style="font-size: 3rem; filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));"></i>
+                            </div>
+                        </div>
+                        <div class="p-16 pt-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-8" style="font-size: 16px;">
+                                <span class="link text-line-2">Legan</span>
+                            </h5>
+                            <div class="flex-align gap-8 mb-16">
+                                <span class="text-neutral-500 text-lg d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                <span class="text-neutral-500" style="font-size: 13px;">20 Okt 2024</span>
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <a href="https://youtu.be/tU5v9wX2x8z" target="_blank" class="btn w-100 rounded-pill fw-semibold transition-2 flex-center gap-8" style="background-color: #000000; color: #fff; font-size: 13px; padding: 10px 0;">
+                                    Tonton di Youtube <i class="ph-bold ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 d-flex flex-column">
+                        <div class="rounded-12 overflow-hidden position-relative" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="G1M1GmU43whw">
+                            <img src="https://img.youtube.com/vi/G1M1GmU43whw/hqdefault.jpg" alt="Aku Ikhlas" class="scale-hover-item__img rounded-12 cover-img transition-2 w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <i class="ph-fill ph-play-circle text-white" style="font-size: 3rem; filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));"></i>
+                            </div>
+                        </div>
+                        <div class="p-16 pt-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-8" style="font-size: 16px;">
+                                <span class="link text-line-2">Aku Ikhlas</span>
+                            </h5>
+                            <div class="flex-align gap-8 mb-16">
+                                <span class="text-neutral-500 text-lg d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                <span class="text-neutral-500" style="font-size: 13px;">11 Nov 2024</span>
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <a href="https://youtu.be/G1M1GmU43whw" target="_blank" class="btn w-100 rounded-pill fw-semibold transition-2 flex-center gap-8" style="background-color: #000000; color: #fff; font-size: 13px; padding: 10px 0;">
+                                    Tonton di Youtube <i class="ph-bold ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Modal -->
+            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-dark border-0 rounded-16 overflow-hidden shadow-lg">
+                  <div class="modal-header border-0 pb-0 justify-content-end p-12">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" data-dismiss="modal" onclick="closeVideoModal()" aria-label="Close" style="background-color: rgba(255,255,255,0.2); border-radius: 50%; padding: 10px; z-index: 9999; position: relative; cursor: pointer;"></button>
+                  </div>
+                  <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                      <iframe id="videoIframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const videoModal = document.getElementById('videoModal');
+                    const videoIframe = document.getElementById('videoIframe');
+
+                    if (videoModal) {
+                        videoModal.addEventListener('show.bs.modal', function (event) {
+                            const triggerElement = event.relatedTarget;
+                            const videoId = triggerElement.getAttribute('data-video-id');
+                            videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                        });
+
+                        videoModal.addEventListener('hide.bs.modal', function () {
+                            videoIframe.src = '';
+                        });
+                        videoModal.addEventListener('hidden.bs.modal', function () {
+                            videoIframe.src = '';
+                        });
+                    }
+                });
+
+                function closeVideoModal() {
+                    const videoIframe = document.getElementById('videoIframe');
+                    if (videoIframe) videoIframe.src = '';
+                    if (window.jQuery) {
+                        $('#videoModal').modal('hide');
+                    }
+                    if (typeof bootstrap !== 'undefined') {
+                        const modalElement = document.getElementById('videoModal');
+                        const modalInstance = bootstrap.Modal.getInstance(modalElement);
+                        if (modalInstance) modalInstance.hide();
+                    }
+                }
+            </script>
+        </div>
+    </section>
+    <!-- ================================ About Section End ==================================== -->`r`n    <!-- ==================== Footer Start Here ==================== -->
+    <footer class="footer position-relative z-1" style="background-color: #ffffff;">
+        <!-- <img src="assets/images/shapes/shape_after_light.png" alt=""
+            class="shape four animation-scalation">
+        <img src="assets/images/shapes/shape_after_light.png" alt=""
+            class="shape two animation-scalation"> -->
+
+        <div class="py-120 ">
+            <div class="container container-two">
+                <div class="row row-cols-xxl-5 row-cols-lg-3 row-cols-sm-2 row-cols-1 gy-5">
+                    <div class="col" data-aos="fade-up" data-aos-duration="300">
+                        <div class="footer-item">
+                            <div class="footer-item__logo">
+                                <a href="#">
+                                    <img src="assets/images/logo.png" alt="Logo">
+                                </a>
+                            </div>
+                            <!-- <p class="my-32">EduAll exceeded all my expectations! The instructors were not only experts</p> -->
+                        </div>
+                    </div>
+                    
+                    <div class="col" data-aos="fade-up" data-aos-duration="800">
+                        <div class="footer-item">
+                            <h4 class="footer-item__title mb-32" style="color: #ffb83c">Contact Us</h4>
+                            <div class="flex-align gap-20 mb-24">
+                                <span class="icon d-flex text-32 text-main-600"><i
+                                        class="ph ph-whatsapp-logo" style="color: #333;"></i></span>
+                                <div class="">
+                                    <a href="https://wa.me/62895421255536"
+                                        target="_blank"
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">0895421255536</a>
+                                </div>
+                            </div>
+
+                            <div class="flex-align gap-20 mb-24">
+                                <span class="icon d-flex text-32 text-main-600"><i
+                                        class="ph ph-envelope-open" style="color: #333;"></i></span>
+                                <div class="">
+                                    <a href="#"
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">aftershine@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col" data-aos="fade-up" data-aos-duration="800">
+                        <div class="footer-item">
+                            <h4 class="footer-item__title mb-32"></h4>
+                            <div class="flex-align gap-20 mb-24">
+                                <span class="icon d-flex text-32 text-main-600"><i
+                                        class="ph-bold ph-facebook-logo" style="color: #333;"></i></span>
+                                <div class="">
+                                    <a href="https://www.facebook.com/share/1Abuvzhs96/?mibextid=wwXIfr" target="_blank"
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">Facebook</a>
+                                </div>
+                            </div>
+
+
+                            <div class="flex-align gap-20 mb-24">
+                                <span class="icon d-flex text-32 text-main-600"><i class="ph-bold ph-x-logo" style="color: #333;"></i></span>
+                                <div class="">
+                                    <a href="https://x.com/aftershineband?s=21" target="_blank"
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">X (Twitter)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col" data-aos="fade-up" data-aos-duration="800">
+                        <div class="footer-item">
+                            <h4 class="footer-item__title mb-32"></h4>
+                            <div class="flex-align gap-20 mb-24">
+                                <span class="icon d-flex text-32 text-main-600"><i
+                                        class="ph-bold ph-instagram-logo" style="color: #333;"></i></span>
+                                <div class="">
+                                    <a href="https://www.instagram.com/aftershine.official?igsh=MXFoaWkyM3YxZmFydw==" target="_blank"
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">Instagram</a>
+                                </div>
+                            </div>
+
+                            <div class="flex-align gap-20 mb-24">
+                                <span class="icon d-flex text-32 text-main-600"><i
+                                        class="ph-bold ph-tiktok-logo" style="color: #333;"></i></span>
+                                <div class="">
+                                    <a href="https://www.tiktok.com/@aftershineofficial?_r=1&_t=ZS-93TxdLQQGYf" target="_blank"
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">TikTok</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- bottom Footer -->
+            <div class="bottom-footer border-top border-dashed border-main-100 border-0 py-32">
+                <div class="container container-two">
+                    <div class="bottom-footer__inner flex-between gap-3 flex-wrap">
+                        <p class="bottom-footer__text" style="color: #333;"> Copyright &copy; 2026 <span
+                                class="fw-semibold">Aftershine</span> All Rights
+                            Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ==================== Footer End Here ==================== -->
+
+    <!-- Jquery js -->
+    <!-- <script src="assets/js/jquery-3.7.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap Bundle Js -->
+    <script src="assets/js/boostrap.bundle.min.js"></script>
+    <!-- select2 Js -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- Phosphor Icon Js -->
+    <script src="assets/js/phosphor-icon.js"></script>
+    <!-- Slick js -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Slick js -->
+    <script src="assets/js/counter.min.js"></script>
+    <!-- magnific popup -->
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <!-- Jquery Ui js -->
+    <script src="assets/js/jquery-ui.js"></script>
+    <!-- marquee js -->
+    <script src="assets/js/marquee.min.js"></script>
+    <!-- react charts-->
+    <script src="assets/js/apexcharts.js"></script>
+    <!-- plyr Js -->
+    <script src="assets/js/plyr.js"></script>
+    <!-- vanilla Tilt -->
+    <!-- Editor js Toolbar Start -->
+    <script src="assets/js/editor-quill.js"></script>
+    <!-- dataTables -->
+    <script src="assets/js/dataTables.min.js"></script>
+    <!-- Tilt -->
+    <script src="assets/js/vanilla-tilt.min.js"></script>
+    <!-- wow -->
+    <script src="assets/js/wow.min.js"></script>
+
+    <script src="assets/js/aos.js"></script>
+
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+          $('.header').addClass('scrolled');
+        } else {
+          $('.header').removeClass('scrolled');
+        }
+      });
+    </script>
+  </body>
+</html>
+
+

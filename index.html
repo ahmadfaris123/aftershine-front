@@ -33,6 +33,27 @@
     <link rel="stylesheet" href="assets/css/aos.css" />
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      @font-face {
+        font-family: 'JMH Typewriter';
+        src: url('assets/JMH Typewriter.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+      :root {
+        --body-font: 'JMH Typewriter', monospace;
+      }
+      body { 
+        font-family: 'JMH Typewriter', monospace; 
+      }
+      html { scroll-behavior: smooth; }
+      .header { transition: all 0.3s ease; background-color: #000000 !important; padding: 15px 0 !important; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+      .nav-link, .navbar-brand, h1, h2, h3, h4, h5, h6, .section-heading h2, .footer-item__title { font-family: "Open Sans", sans-serif !important; }
+      .nav-link { font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; position: relative; padding-bottom: 5px; }
+      .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 50%; background-color: #ffb83c; transition: all 0.3s ease; transform: translateX(-50%); }
+      .nav-link:hover::after { width: 100%; }
+      .nav-link:hover { color: #ffb83c !important; }
+    </style>
   </head>
   <body>
     <!--==================== Overlay Start ====================-->
@@ -56,91 +77,127 @@
     </div>
     <!-- ==================== Scroll to Top End Here ==================== -->
 
-    <!-- ========================= Banner Section Start =============================== -->
-    <section
-      class="banner py-80 position-relative overflow-hidden"
-      style="background-color: #0046bf"
-    >
+    <!-- ========================= Header Section Start =============================== -->
+    <header class="header position-fixed w-100" style="top: 0; left: 0; padding: 15px 0; z-index: 9999;">
       <div class="container">
-        <div class="row gy-5 align-items-center">
-          <div class="col-12">
-            <div class="banner-thumb position-relative text-center">
-              <img
-                src="assets/images/logo-light.png"
-                alt="Default Background"
-                class="banner-thumb__img rounded-12 wow bounceIn"
-                data-wow-duration="3s"
-                data-wow-delay=".5s"
-                data-tilt
-                data-tilt-max="12"
-                data-tilt-speed="500"
-                data-tilt-perspective="5000"
-                data-tilt-full-page-listening
-                data-tilt-scale="1.02"
-              />
-            </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-0">
+          <a class="navbar-brand" href="#home">
+            <img src="assets/images/logo-light.png" alt="Logo" style="max-height: 40px; object-fit: contain;">
+          </a>
+          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav gap-2 gap-lg-5" style="font-size: 13px;">
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#profile">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#personel">Personel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#music">Originals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#events">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white transition-1" href="#awards">Awards</a>
+              </li>
+            </ul>
           </div>
-        </div>
+          <div class="d-none d-lg-flex align-items-center gap-3">
+              <a href="#" class="text-white hover-text-main-600 transition-1"><i class="ph ph-user" style="font-size: 24px;"></i></a>
+              
+          </div>
+        </nav>
       </div>
-    </section>
-    <!-- ========================= Banner SEction End =============================== -->
+    </header>
+    <!-- ========================= Header Section End =============================== -->
 
-    <!-- ========================== Brand Section Start =========================== -->
-    <div
-      class="brand wow fadeInUpBig"
-      data-wow-duration="1s"
-      data-wow-delay=".5s"
-      style="background-color: #0046bf"
-    >
-      <div class="container container--lg">
-        <div
-          class="brand-box py-80 px-16 bg-main-25 border border-neutral-30 rounded-16"
-        >
-          <h5 class="mb-40 text-center text-neutral-500">Contact Us</h5>
-          <div class="container">
-            <div class="text-center">
-              <a
-                href="https://wa.me/62895421255536"
-                target="_blank"
-                class="text-neutral-500 d-block hover-text-main-600 mb-4"
-              >
-                <i class="ph-bold ph-whatsapp-logo"></i> +62895421255536
-              </a>
+    <!-- ========================= Banner Section Start =============================== -->
+    <section id="home" class="banner bg-white">
+        <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/images/carousel/3.png" class="d-block w-100 object-fit-cover" alt="Banner 1" style="height: 80vh; background-color: #f8f9fa;">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/carousel/4.png" class="d-block w-100 object-fit-cover" alt="Banner 1" style="height: 80vh; background-color: #f8f9fa;">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/carousel/5.png" class="d-block w-100 object-fit-cover" alt="Banner 1" style="height: 80vh; background-color: #f8f9fa;">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/carousel/6.png" class="d-block w-100 object-fit-cover" alt="Banner 2" style="height: 80vh; background-color: #f8f9fa;">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/carousel/7.png" class="d-block w-100 object-fit-cover" alt="Banner 3" style="height: 80vh; background-color: #f8f9fa;">
             </div>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-      </div>
-    </div>
-    <!-- ========================== Brand Section End =========================== -->
+    </section>
+    <!-- ========================= Banner Section End =============================== -->
+
+    
 
     <!-- ============================= Features Section Start ============================== -->
     <section
-      class="choose-us pt-120 position-relative z-1 mash-bg-main mash-bg-main-two"
-      style="background-color: #0046bf"
+      id="profile"
+      class="choose-us pt-120 position-relative z-1 bg-white"
+      style="background-color: #ffffff;"
     >
-        <img src="assets/images/shapes/shape_after_light.png" alt=""
-            class="shape two animation-scalation">
+        <!-- <img src="assets/images/shapes/shape_after_light.png" alt=""
+            class="shape two animation-scalation"> -->
       <div class="container">
-        <div class="row gy-5">
-          <div class="col-lg-12">
+        <div class="row gy-5 align-items-center">
+          <!-- Gambar di bagian kiri -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200">
+            <div class="position-relative d-inline-block">
+              <img src="assets/images/carousel/8.png" alt="Aftershine" class="img-fluid rounded-16">
+              <img src="assets/images/ASSET WEBSITE AFTERSHINE-3.png" alt="Logogram" class="position-absolute" style="top: 0; left: 0; transform: translate(-45%, -45%); width: 150px; z-index: 2;">
+            </div>
+          </div>
+          <!-- Teks di bagian kanan -->
+          <div class="col-lg-6">
             <div class="testimonials__content">
-              <div class="section-heading style-left">
-                <h2 class="mb-24 wow bounceIn" style="color: #ffb83c">
-                  What is Aftershine
-                </h2>
+              <div class="section-heading style-left" style="margin-top: -20px;">
+                <p>About Us</p>
+                <h1 class="mb-24 wow bounceIn" style="color: #ffb83c">
+                  Aftershine
+                </h1>
               </div>
 
               <div class="testimonials__slider">
                 <div class="testimonials-item">
                   <p
-                    class="text-white"
+                    class="text-dark"
                     data-aos="fade-left"
                     data-aos-duration="1200"
                   >
-                    Adalah band pop Jawa modern dengan karakter emosional,
-                    elegan, tanpa menghilangkan cita rasa jawa. Musiknya
-                    memadukan unsur pop, romansa, dan identitas lokal yang mudah
-                    diterima banyak kalangan
+                    Hi, salam kenal, sebelum melangkah lebih jauh, izinkan kami menyapa. 
+                    <br>
+                    <br>
+                    Perkenalkan kami Afetrshine. lahir didesa dari jalan kecil yang lebih sering diselimuti suara jangkrik daripada sorot lampu kota.
+                    Kami tumbuh bersama debu sawah, tongkrongan sederhana, dan mimpi-mimpi besar yang diam-diam dipelihara di kepala.
+                    Membawa warna pop Jawa, kami meramu lirik-lirik yang dekat dengan hidup banyak orang, tentang patah hati, pulang, kelangan, hingga harapan yang tetap dipaksa hidup meski keadaan sempit.
+                    Musik kami bukan sekadar hiburan, tapi surat dari kampung kecil yang kami sisipkan untuk siapa saja yang sedang berjuang di luar sana.
+                    Dari desa, kami datang tanpa banyak gaduh dan perlahan menjelma jadi suara yang dinyanyikan banyak orang.
+                    <br>
+                    <br>
+                    Best Regrads,
+                    Aftershine
                   </p>
                 </div>
               </div>
@@ -151,31 +208,21 @@
       </div>
     </section>
     <!-- ============================= Features Section End ============================== -->
-
+    <section class="image-separator bg-white py-60">
+      <div class="container-fluid px-0" data-aos="fade-up" data-aos-duration="500">
+        <img src="assets/images/ASSET WEBSITE AFTERSHINE.png" alt="Aftershine Asset" class="w-100 object-fit-cover">
+      </div>
+    </section>
     <!-- ============================= Features Section Start ============================== -->
-    <section
+    <!-- <section
       class="features py-120 position-relative"
-      style="background-color: #0046bf">
+      style="background-color: #ffffff;">
       <img src="assets/images/shapes/shape_after_light.png" alt=""
             class="shape one animation-scalation">
         <img src="assets/images/shapes/shape_after_light.png" alt=""
             class="shape two animation-scalation">
       <div class="container">
-        <div class="row gy-5">
-          <div class="col-lg-6">
-            <div class="testimonials__thumbs-slider pe-lg-5 me-xxl-5">
-              <div
-                class="testimonials__thumbs wow bounceIn"
-                data-tilt
-                data-tilt-max="15"
-                data-tilt-speed="500"
-                data-tilt-perspective="5000"
-                data-tilt-full-page-listening
-              >
-                <img src="assets/images/logo-light.png" alt="" />
-              </div>
-            </div>
-          </div>
+        <div class="row gy-5 align-items-center">
           <div class="col-lg-6">
             <div class="testimonials__content">
               <div class="section-heading style-left">
@@ -187,7 +234,7 @@
               <div class="testimonials__slider">
                 <div class="testimonials-item">
                   <p
-                    class="text-white"
+                    class="text-dark"
                     data-aos="fade-left"
                     data-aos-duration="1200"
                   >
@@ -200,28 +247,61 @@
               <div class="flex-align gap-16 mt-40"></div>
             </div>
           </div>
+          <div class="col-lg-6">
+            <div class="testimonials__thumbs-slider pe-lg-5 me-xxl-5">
+              <div
+                class="testimonials__thumbs wow bounceIn text-end"
+                data-tilt
+                data-tilt-max="15"
+                data-tilt-speed="500"
+                data-tilt-perspective="5000"
+                data-tilt-full-page-listening
+              >
+                <img src="assets/images/AFTERSHINE_MAIN LOGO_BLACK.png" alt="" class="img-fluid" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- ============================= Features Section End ============================== -->
 
     <!-- =========================== CHoose Us Section Start ================================ -->
-    <section
-      class="choose-us pt-120 position-relative z-1 mash-bg-main mash-bg-main-two"
-      style="background-color: #0046bf">
+    <!-- <section
+      class="choose-us pt-120 position-relative z-1 bg-white"
+      style="background-color: #ffffff;">
       <img src="assets/images/shapes/shape_after_light.png" alt=""
             class="shape four animation-scalation">
         <img src="assets/images/shapes/shape_after_light.png" alt=""
             class="shape two animation-scalation">
       <div class="container">
-        <div class="row gy-4">
+        <div class="row gy-4 align-items-center">
+          <div class="col-xl-6">
+            <div class="choose-us__thumbs position-relative">
+              <div class="text-start" data-aos="zoom-out">
+                <div class="d-sm-inline-block d-block position-relative">
+                  <img
+                    src="assets/images/AFTERSHINE_LOGOGRAM_BLACK.png"
+                    alt=""
+                    class="choose-us__img rounded-12"
+                    style="max-width: 85%; padding: 20px;"
+                    data-tilt
+                    data-tilt-max="16"
+                    data-tilt-speed="500"
+                    data-tilt-perspective="5000"
+                    data-tilt-full-page-listening
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-xl-6">
             <div class="choose-us__content">
               <div class="mb-40">
                 <h2 class="mb-24 wow bounceIn" style="color: #ffb83c">
                   Logogram Philosophy.
                 </h2>
-                <p class="text-white text-line-5 wow bounceInUp">
+                <p class="text-dark text-line-5 wow bounceInUp">
                   Menggambarkan Siluet Matahari dengan huruf A di tengahnya yang
                   memiliki Makna secara universal melambangkan sumber energi,
                   pencerahan, dan harapan, dan setiap perjalanan besar selalu
@@ -233,267 +313,154 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-6">
-            <div class="choose-us__thumbs position-relative">
-              <div class="text-end" data-aos="zoom-out">
-                <div class="d-sm-inline-block d-block position-relative">
-                  <img
-                    src="assets/images/logo-gram.png"
-                    alt=""
-                    class="choose-us__img rounded-12"
-                    data-tilt
-                    data-tilt-max="16"
-                    data-tilt-speed="500"
-                    data-tilt-perspective="5000"
-                    data-tilt-full-page-listening
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="testimonials py-120 position-relative z-1" style="background-color: #0046bf">
+    <!-- ========================== Image Separator Section ========================== -->
+
+    <section id="personel" class="testimonials py-120 position-relative z-1" style="background-color: #ffffff;">
         <div class="container">
 
             <div class="section-heading text-center">
-                <h2 class="mb-24 wow bounceIn" style="color: #ffb83c">The Personel</h2>
+                <img src="assets/images/ASSET WEBSITE AFTERSHINE-5.png" alt="Aftershine Asset" class="w-100 object-fit-cover">
             </div>
 
             <div class="tutor-slider">
-                <div class="scale-hover-item bg-white rounded-16 p-12 h-100 border border-neutral-20" data-aos="fade-up"
-                    data-aos-duration="200">
-                    <div class="course-item__thumb rounded-12 bg-main-25 overflow-hidden position-relative">
-                        <img src="assets/images/hasan.jpg"
-                            class="scale-hover-item__img rounded-12 cover-img transition-2">
+                <!-- Hasan -->
+                <div class="px-12" data-aos="fade-up" data-aos-duration="200">
+                    <div class="overflow-hidden mb-24">
+                        <img src="assets/images/FOTO_PROFIL/9.jpg"
+                            class="w-100" style="aspect-ratio: 1/1; object-fit: cover;">
                     </div>
-                    <div class="pt-32 pb-24 px-16 position-relative">
-                        <div class="">
-                            <h4 class="mb-16">
-                                <span class="link text-line-2">Hasan</span>
-                            </h4>
-                            <div class="mt-24 flex-between gap-16 flex-wrap">
-                                <h4 class="mb-0 text-main-two-600">
-                                    Vokalis
-                                </h4>
-                            </div>
-                            <div
-                                class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-24 border-dashed border-0">
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-facebook-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-instagram-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-tiktok-logo"></i></a></span>
-                                </div>
-
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-x-logo"></i></a></span>
-                                </div>
-                            </div>
+                    <div class="text-start">
+                        <h4 class="mb-12" style="color: #000; font-weight: 700;">Hasan</h4>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">Vokalis</p>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">hasan@aftershine.id</p>
+                        <p class="mb-24" style="color: #333; font-size: 14px;">+62 812 3456 7890</p>
+                        
+                        <div class="d-flex gap-16">
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-instagram-logo"></i>
+                            </a>
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-tiktok-logo"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="scale-hover-item bg-white rounded-16 p-12 h-100 border border-neutral-20" data-aos="fade-up"
-                    data-aos-duration="200">
-                    <div class="course-item__thumb rounded-12 bg-main-25 overflow-hidden position-relative">
-                        <img src="assets/images/andika.jpg"
-                            class="scale-hover-item__img rounded-12 cover-img transition-2">
-                    </div>
-                    <div class="pt-32 pb-24 px-16 position-relative">
-                        <div class="">
-                            <h4 class="mb-16">
-                                <span class="link text-line-2">Andika</span>
-                            </h4>
-                            <div class="mt-24 flex-between gap-16 flex-wrap">
-                                <h4 class="mb-0 text-main-two-600">
-                                    Gitar Lead
-                                </h4>
-                            </div>
-                            <div
-                                class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-24 border-dashed border-0">
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-facebook-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-instagram-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-tiktok-logo"></i></a></span>
-                                </div>
 
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-x-logo"></i></a></span>
-                                </div>
-                            </div>
+                <!-- Andika -->
+                <div class="px-12" data-aos="fade-up" data-aos-duration="200">
+                    <div class="overflow-hidden mb-24">
+                        <img src="assets/images/FOTO_PROFIL/13.jpg"
+                            class="w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+                    </div>
+                    <div class="text-start">
+                        <h4 class="mb-12" style="color: #000; font-weight: 700;">Andika</h4>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">Gitar Lead</p>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">andika@aftershine.id</p>
+                        <p class="mb-24" style="color: #333; font-size: 14px;">+62 812 3456 7891</p>
+                        
+                        <div class="d-flex gap-16">
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-instagram-logo"></i>
+                            </a>
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-tiktok-logo"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="scale-hover-item bg-white rounded-16 p-12 h-100 border border-neutral-20" data-aos="fade-up"
-                    data-aos-duration="200">
-                    <div class="course-item__thumb rounded-12 bg-main-25 overflow-hidden position-relative">
-                        <img src="assets/images/yuriko.jpg"
-                            class="scale-hover-item__img rounded-12 cover-img transition-2">
-                    </div>
-                    <div class="pt-32 pb-24 px-16 position-relative">
-                        <div class="">
-                            <h4 class="mb-16">
-                                <span class="link text-line-2">Yuriko</span>
-                            </h4>
-                            <div class="mt-24 flex-between gap-16 flex-wrap">
-                                <h4 class="mb-0 text-main-two-600">
-                                    Kendang
-                                </h4>
-                            </div>
-                            <div
-                                class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-24 border-dashed border-0">
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-facebook-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-instagram-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-tiktok-logo"></i></a></span>
-                                </div>
 
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-x-logo"></i></a></span>
-                                </div>
-                            </div>
+                <!-- Yuriko -->
+                <div class="px-12" data-aos="fade-up" data-aos-duration="200">
+                    <div class="overflow-hidden mb-24">
+                        <img src="assets/images/FOTO_PROFIL/14.jpg"
+                            class="w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+                    </div>
+                    <div class="text-start">
+                        <h4 class="mb-12" style="color: #000; font-weight: 700;">Yuriko</h4>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">Kendang</p>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">yuriko@aftershine.id</p>
+                        <p class="mb-24" style="color: #333; font-size: 14px;">+62 812 3456 7892</p>
+                        
+                        <div class="d-flex gap-16">
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-instagram-logo"></i>
+                            </a>
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-tiktok-logo"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="scale-hover-item bg-white rounded-16 p-12 h-100 border border-neutral-20" data-aos="fade-up"
-                    data-aos-duration="200">
-                    <div class="course-item__thumb rounded-12 bg-main-25 overflow-hidden position-relative">
-                        <img src="assets/images/agus.jpg"
-                            class="scale-hover-item__img rounded-12 cover-img transition-2">
-                    </div>
-                    <div class="pt-32 pb-24 px-16 position-relative">
-                        <div class="">
-                            <h4 class="mb-16">
-                                <span class="link text-line-2">Agus</span>
-                            </h4>
-                            <div class="mt-24 flex-between gap-16 flex-wrap">
-                                <h4 class="mb-0 text-main-two-600">
-                                    Basis
-                                </h4>
-                            </div>
-                            <div
-                                class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-24 border-dashed border-0">
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-facebook-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-instagram-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-tiktok-logo"></i></a></span>
-                                </div>
 
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-x-logo"></i></a></span>
-                                </div>
-                            </div>
+                <!-- Agus -->
+                <div class="px-12" data-aos="fade-up" data-aos-duration="200">
+                    <div class="overflow-hidden mb-24">
+                        <img src="assets/images/FOTO_PROFIL/11.jpg"
+                            class="w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+                    </div>
+                    <div class="text-start">
+                        <h4 class="mb-12" style="color: #000; font-weight: 700;">Agus</h4>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">Basis</p>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">agus@aftershine.id</p>
+                        <p class="mb-24" style="color: #333; font-size: 14px;">+62 812 3456 7893</p>
+                        
+                        <div class="d-flex gap-16">
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-instagram-logo"></i>
+                            </a>
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-tiktok-logo"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="scale-hover-item bg-white rounded-16 p-12 h-100 border border-neutral-20" data-aos="fade-up"
-                    data-aos-duration="200">
-                    <div class="course-item__thumb rounded-12 bg-main-25 overflow-hidden position-relative">
-                        <img src="assets/images/hedo.jpg"
-                            class="scale-hover-item__img rounded-12 cover-img transition-2">
-                    </div>
-                    <div class="pt-32 pb-24 px-16 position-relative">
-                        <div class="">
-                            <h4 class="mb-16">
-                                <span class="link text-line-2">Hedo</span>
-                            </h4>
-                            <div class="mt-24 flex-between gap-16 flex-wrap">
-                                <h4 class="mb-0 text-main-two-600">
-                                    Gitar Akustik
-                                </h4>
-                            </div>
-                            <div
-                                class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-24 border-dashed border-0">
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-facebook-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-instagram-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-tiktok-logo"></i></a></span>
-                                </div>
 
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-x-logo"></i></a></span>
-                                </div>
-                            </div>
+                <!-- Hedo -->
+                <div class="px-12" data-aos="fade-up" data-aos-duration="200">
+                    <div class="overflow-hidden mb-24">
+                        <img src="assets/images/FOTO_PROFIL/10.jpg"
+                            class="w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+                    </div>
+                    <div class="text-start">
+                        <h4 class="mb-12" style="color: #000; font-weight: 700;">Hedo</h4>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">Gitar Akustik</p>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">hedo@aftershine.id</p>
+                        <p class="mb-24" style="color: #333; font-size: 14px;">+62 812 3456 7894</p>
+                        
+                        <div class="d-flex gap-16">
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-instagram-logo"></i>
+                            </a>
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-tiktok-logo"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="scale-hover-item bg-white rounded-16 p-12 h-100 border border-neutral-20" data-aos="fade-up"
-                    data-aos-duration="200">
-                    <div class="course-item__thumb rounded-12 bg-main-25 overflow-hidden position-relative">
-                        <img src="assets/images/zulian.jpg"
-                            class="scale-hover-item__img rounded-12 cover-img transition-2">
-                    </div>
-                    <div class="pt-32 pb-24 px-16 position-relative">
-                        <div class="">
-                            <h4 class="mb-16">
-                                <span class="link text-line-2">Zulian</span>
-                            </h4>
-                            <div class="mt-24 flex-between gap-16 flex-wrap">
-                                <h4 class="mb-0 text-main-two-600">
-                                    Keyboards
-                                </h4>
-                            </div>
-                            <div
-                                class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-24 border-dashed border-0">
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-facebook-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-instagram-logo"></i></a></span>
-                                </div>
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-tiktok-logo"></i></a></span>
-                                </div>
 
-                                <div class="flex-align">
-                                    <span class="text-2xl text-main-600 d-flex"><a href="#"
-                                            target="_blank"><i class="ph-bold ph-x-logo"></i></a></span>
-                                </div>
-                            </div>
+                <!-- Zulian -->
+                <div class="px-12" data-aos="fade-up" data-aos-duration="200">
+                    <div class="overflow-hidden mb-24">
+                        <img src="assets/images/FOTO_PROFIL/12.jpg"
+                            class="w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+                    </div>
+                    <div class="text-start">
+                        <h4 class="mb-12" style="color: #000; font-weight: 700;">Zulian</h4>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">Keyboards</p>
+                        <p class="mb-8" style="color: #333; font-size: 14px;">zulian@aftershine.id</p>
+                        <p class="mb-24" style="color: #333; font-size: 14px;">+62 812 3456 7895</p>
+                        
+                        <div class="d-flex gap-16">
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-instagram-logo"></i>
+                            </a>
+                            <a href="#" target="_blank" class="text-dark transition-1 text-xl">
+                                <i class="ph-bold ph-tiktok-logo"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -501,11 +468,11 @@
 
             <div class="flex-center gap-16 mt-40">
                 <button type="button" id="tutor-prev"
-                    class="slick-prev slick-arrow flex-center rounded-circle border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48 text-white">
+                    class="slick-prev slick-arrow flex-center rounded-circle border border-dark hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48 text-dark">
                     <i class="ph ph-caret-left"></i>
                 </button>
                 <button type="button" id="tutor-next"
-                    class="slick-next slick-arrow flex-center rounded-circle border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48 text-white">
+                    class="slick-next slick-arrow flex-center rounded-circle border border-dark hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48 text-dark">
                     <i class="ph ph-caret-right"></i>
                 </button>
             </div>
@@ -513,131 +480,272 @@
     </section>
 
     <!-- ================================ About Section Start ==================================== -->
-    <section class="choose-us pt-120 position-relative z-1 mash-bg-main mash-bg-main-two" style="background-color: #0046bf">
-        <img src="assets/images/shapes/shape_after_light.png" alt=""
-            class="shape one animation-scalation">
-        <img src="assets/images/shapes/shape_after_light.png" alt=""
-            class="shape six animation-scalation">
-
+    <section id="music" class="choose-us pt-120 position-relative z-1" style="background-color: #f8fafc;">
+        <style>
+            .video-card {
+                box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+                transition: all 0.3s ease;
+            }
+            .video-card:hover {
+                box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+            }
+            .video-card img {
+                transition: transform 0.5s ease;
+            }
+            .video-card:hover img {
+                transform: scale(1.05);
+            }
+            .video-card .play-btn {
+                transition: all 0.3s ease;
+            }
+            .video-card:hover .play-btn {
+                background-color: #0f172a !important;
+                transform: translate(-50%, -50%) scale(1.1) !important;
+            }
+            .video-card:hover .play-btn i {
+                color: #ffffff !important;
+            }
+        </style>
         <div class="container">
-            <div class="section-heading text-center">
-                <h2 class="mb-24 wow bounceIn" style="color: #ffb83c">Our Originals.</h2>
+            <!-- Header Section -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-40" data-aos="fade-up">
+                <div class="mb-3 mb-md-0">
+                    <span style="color: #64748b; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 8px;">Dari Youtube</span>
+                    <h2 class="mb-0" style="font-weight: 900; font-size: 32px; color: #0f172a; text-transform: uppercase; letter-spacing: -0.5px;">Video Lainnya</h2>
+                </div>
+                <a href="http://www.youtube.com/@AFTERSHINE" target="_blank" class="btn rounded-pill flex-align gap-8 fw-bold transition-2" style="background-color: #0f172a; color: #fff; padding: 12px 28px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">
+                    Tonton di Youtube <i class="ph-bold ph-caret-right text-lg"></i>
+                </a>
             </div>
+
             <div class="row gy-4">
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
-                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
-                        <div class="rounded-12 overflow-hidden position-relative">
-                            <a href="" target="_blank" class="w-100 h-100">
-                                <img src="assets/images/dada.jpg" alt=""
-                                    class="scale-hover-item__img rounded-12 cover-img transition-2">
-                            </a>
-                        </div>
-                        <div class="p-24 pt-32">
-                            <div class="">
-                                <span
-                                    class="px-20 py-8 bg-main-two-600 rounded-8 text-white fw-medium mb-20">Aftershine</span>
-                                <h4 class="mb-28">
-                                    <span class="link text-line-2">Dada</span>
-                                </h4>
-                                <div class="flex-align gap-14 flex-wrap my-20">
-                                    <div class="flex-align gap-8">
-                                        <span class="text-neutral-500 text-2xl d-flex"><i
-                                                class="ph ph-calendar-dot"></i></span>
-                                        <span
-                                            class="text-neutral-500 text-lg">13 Juni 2025</span>
-                                    </div>
-                                </div>
-                                <p class="text-neutral-500 text-line-5">Lagu ini bercerita tentang keikhlasan dalam sebuah hubungan, ketika seseorang memilih untuk melepaskan pasangannya demi kebahagiaan orang yang dicintainya. Melalui lirik dan nuansa musiknya, lagu ini menegaskan bahwa kebahagiaan sejati tidak selalu berarti bersama orang yang kini ada di sisi kita. Terkadang, mencintai juga berarti merelakan dan menemukan ketenangan dalam melihat orang yang kita sayangi bahagia, meski bukan bersama kita.</p>
+                <!-- Card 1 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="bg-white h-100 d-flex flex-column border-0 video-card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="erfHfqTgMc8">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/erfHfqTgMc8/hqdefault.jpg" alt="Dada" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="play-btn position-absolute top-50 start-50 translate-middle bg-white rounded-circle flex-center" style="width: 48px; height: 48px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <i class="ph-fill ph-play" style="font-size: 24px; color: #0f172a; margin-left: 4px;"></i>
                             </div>
-                            <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                <a href="https://youtu.be/erfHfqTgMc8?si=at90aKDdDYydrr3n" target="_blank"
-                                    class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
-                                    tabindex="0">
-                                    See on Youtube
-                                    <i class="ph ph-arrow-right"></i>
-                                </a>
+                        </div>
+                        <div class="p-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-16 text-line-3" style="font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.5;">
+                                Dada
+                            </h5>
+                            <div class="mt-auto">
+                                <span style="color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">13 Juni 2025</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
-                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
-                        <div class="rounded-12 overflow-hidden position-relative">
-                            <a href="" target="_blank" class="w-100 h-100">
-                                <img src="assets/images/matur.jpg" alt=""
-                                    class="scale-hover-item__img rounded-12 cover-img transition-2">
-                            </a>
-                        </div>
-                        <div class="p-24 pt-32">
-                            <div class="">
-                                <span
-                                    class="px-20 py-8 bg-main-two-600 rounded-8 text-white fw-medium mb-20">Aftershine ft. Dinda Teratu </span>
-                                <h4 class="mb-28">
-                                    <span class="link text-line-2">Matursuwun Gusti</span>
-                                </h4>
-                                <div class="flex-align gap-14 flex-wrap my-20">
-                                    <div class="flex-align gap-8">
-                                        <span class="text-neutral-500 text-2xl d-flex"><i
-                                                class="ph ph-calendar-dot"></i></span>
-                                        <span
-                                            class="text-neutral-500 text-lg">14 January 2025</span>
-                                    </div>
-                                </div>
-                                <p class="text-neutral-500 text-line-5">lagu ini mendefinisikan tentang arti sebuah rasa syukur kepada tuhan untuk seseorang yang kita sayangi.</p>
+                
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="bg-white h-100 d-flex flex-column border-0 video-card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="o1gSJKCmJH8">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/o1gSJKCmJH8/hqdefault.jpg" alt="Matursuwun Gusti" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="play-btn position-absolute top-50 start-50 translate-middle bg-white rounded-circle flex-center" style="width: 48px; height: 48px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <i class="ph-fill ph-play" style="font-size: 24px; color: #0f172a; margin-left: 4px;"></i>
                             </div>
-                            <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                <a href="https://youtu.be/o1gSJKCmJH8?si=2M45qKKems5f-ibY" target="_blank"
-                                    class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
-                                    tabindex="0">
-                                    See on Youtube
-                                    <i class="ph ph-arrow-right"></i>
-                                </a>
+                        </div>
+                        <div class="p-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-16 text-line-3" style="font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.5;">
+                                Matursuwun Gusti
+                            </h5>
+                            <div class="mt-auto">
+                                <span style="color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">14 Jan 2025</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
-                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
-                        <div class="rounded-12 overflow-hidden position-relative">
-                            <a href="" target="_blank" class="w-100 h-100">
-                                <img src="assets/images/all.jpg" alt=""
-                                    class="scale-hover-item__img rounded-12 cover-img transition-2">
-                            </a>
-                        </div>
-                        <div class="p-24 pt-32">
-                            <div class="">
-                                <span
-                                    class="px-20 py-8 bg-main-two-600 rounded-8 text-white fw-medium mb-20">Aftershine</span>
-                                <h4 class="mb-28">
-                                    <span class="link text-line-2">ALL IN FOR YOU</span>
-                                </h4>
-                                <div class="flex-align gap-14 flex-wrap my-20">
-                                    <div class="flex-align gap-8">
-                                        <span class="text-neutral-500 text-2xl d-flex"><i
-                                                class="ph ph-calendar-dot"></i></span>
-                                        <span
-                                            class="text-neutral-500 text-lg">9 Agustus 2024</span>
-                                    </div>
-                                </div>
-                                <p class="text-neutral-500 text-line-5">Lagu ini menceritakan perjuangan seorang laki laki kekurangan ekonomi untuk membuktikan keseriusan kepada pujaan hatinya. bahwa cinta butuh biaya, waktu, dan kesabaran/prihatin.</p>
+
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="bg-white h-100 d-flex flex-column border-0 video-card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="DKC4vtUAlaA">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/DKC4vtUAlaA/hqdefault.jpg" alt="ALL IN FOR YOU" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="play-btn position-absolute top-50 start-50 translate-middle bg-white rounded-circle flex-center" style="width: 48px; height: 48px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <i class="ph-fill ph-play" style="font-size: 24px; color: #0f172a; margin-left: 4px;"></i>
                             </div>
-                            <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                <a href="https://youtu.be/DKC4vtUAlaA?si=9qN3jljVvoQotrGr" target="_blank"
-                                    class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
-                                    tabindex="0">
-                                    See on Youtube
-                                    <i class="ph ph-arrow-right"></i>
-                                </a>
+                        </div>
+                        <div class="p-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-16 text-line-3" style="font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.5;">
+                                ALL IN FOR YOU
+                            </h5>
+                            <div class="mt-auto">
+                                <span style="color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">9 Agu 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="bg-white h-100 d-flex flex-column border-0 video-card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="Y-i0c6F1R6c">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/Y-i0c6F1R6c/hqdefault.jpg" alt="Kalah" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="play-btn position-absolute top-50 start-50 translate-middle bg-white rounded-circle flex-center" style="width: 48px; height: 48px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <i class="ph-fill ph-play" style="font-size: 24px; color: #0f172a; margin-left: 4px;"></i>
+                            </div>
+                        </div>
+                        <div class="p-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-16 text-line-3" style="font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.5;">
+                                Kalah
+                            </h5>
+                            <div class="mt-auto">
+                                <span style="color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">10 Jul 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="bg-white h-100 d-flex flex-column border-0 video-card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="YwV_rJ7YqC4">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/YwV_rJ7YqC4/hqdefault.jpg" alt="Kalah 2" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="play-btn position-absolute top-50 start-50 translate-middle bg-white rounded-circle flex-center" style="width: 48px; height: 48px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <i class="ph-fill ph-play" style="font-size: 24px; color: #0f172a; margin-left: 4px;"></i>
+                            </div>
+                        </div>
+                        <div class="p-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-16 text-line-3" style="font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.5;">
+                                Kalah 2
+                            </h5>
+                            <div class="mt-auto">
+                                <span style="color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">15 Agu 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="bg-white h-100 d-flex flex-column border-0 video-card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="9t_v_s_V-lU">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/9t_v_s_V-lU/hqdefault.jpg" alt="Tutupono" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="play-btn position-absolute top-50 start-50 translate-middle bg-white rounded-circle flex-center" style="width: 48px; height: 48px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <i class="ph-fill ph-play" style="font-size: 24px; color: #0f172a; margin-left: 4px;"></i>
+                            </div>
+                        </div>
+                        <div class="p-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-16 text-line-3" style="font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.5;">
+                                Tutupono
+                            </h5>
+                            <div class="mt-auto">
+                                <span style="color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">12 Sep 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="bg-white h-100 d-flex flex-column border-0 video-card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="tU5v9wX2x8z">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/tU5v9wX2x8z/hqdefault.jpg" alt="Legan" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="play-btn position-absolute top-50 start-50 translate-middle bg-white rounded-circle flex-center" style="width: 48px; height: 48px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <i class="ph-fill ph-play" style="font-size: 24px; color: #0f172a; margin-left: 4px;"></i>
+                            </div>
+                        </div>
+                        <div class="p-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-16 text-line-3" style="font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.5;">
+                                Legan
+                            </h5>
+                            <div class="mt-auto">
+                                <span style="color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">20 Okt 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="bg-white h-100 d-flex flex-column border-0 video-card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="G1M1GmU43whw">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/G1M1GmU43whw/hqdefault.jpg" alt="Aku Ikhlas" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <div class="play-btn position-absolute top-50 start-50 translate-middle bg-white rounded-circle flex-center" style="width: 48px; height: 48px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <i class="ph-fill ph-play" style="font-size: 24px; color: #0f172a; margin-left: 4px;"></i>
+                            </div>
+                        </div>
+                        <div class="p-20 d-flex flex-column flex-grow-1">
+                            <h5 class="mb-16 text-line-3" style="font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.5;">
+                                Aku Ikhlas
+                            </h5>
+                            <div class="mt-auto">
+                                <span style="color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">11 Nov 2024</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Video Modal -->
+            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered position-relative">
+                <!-- Tombol Close diletakkan di luar konten iframe agar terhindar dari bentrok klik -->
+                <button type="button" class="position-absolute" onclick="forceCloseModal()" data-bs-dismiss="modal" data-dismiss="modal" aria-label="Close" style="top: -40px; right: 0; background: transparent; border: none; color: #ffffff; font-size: 32px; z-index: 9999; cursor: pointer; opacity: 0.8;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
+                    <i class="ph-bold ph-x"></i>
+                </button>
+                <div class="modal-content bg-dark border-0 rounded-16 overflow-hidden shadow-lg w-100">
+                  <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                      <iframe id="videoIframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+                function forceCloseModal() {
+                    const videoIframe = document.getElementById('videoIframe');
+                    if (videoIframe) videoIframe.src = '';
+                    if (window.jQuery) {
+                        $('#videoModal').modal('hide');
+                    }
+                    if (typeof bootstrap !== 'undefined') {
+                        const modalElement = document.getElementById('videoModal');
+                        if (modalElement) {
+                            const modalInstance = bootstrap.Modal.getInstance(modalElement);
+                            if (modalInstance) modalInstance.hide();
+                        }
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    const videoModal = document.getElementById('videoModal');
+                    const videoIframe = document.getElementById('videoIframe');
+
+                    if (videoModal) {
+                        videoModal.addEventListener('show.bs.modal', function (event) {
+                            const triggerElement = event.relatedTarget;
+                            const videoId = triggerElement.getAttribute('data-video-id');
+                            // Menambahkan parameter controls=1 untuk memastikan kontrol YouTube muncul
+                            videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&rel=0`;
+                        });
+
+                        videoModal.addEventListener('hide.bs.modal', function () {
+                            videoIframe.src = '';
+                        });
+                        videoModal.addEventListener('hidden.bs.modal', function () {
+                            videoIframe.src = '';
+                        });
+
+                        // Memaksa modal close saat area backdrop (luar modal) di klik
+                        videoModal.addEventListener('click', function(e) {
+                            if (e.target === videoModal) {
+                                forceCloseModal();
+                            }
+                        });
+                    }
+                });
+            </script>
         </div>
     </section>
     <!-- ================================ About Section End ==================================== -->
 
-    <section class="testimonials py-120 position-relative z-1" style="background-color: #0046bf">
+    <section id="events" class="testimonials py-120 position-relative z-1" style="background-color: #ffffff;">
         <div class="container">
             <div class="section-heading text-center">
                 <h2 class="mb-24 wow bounceIn" style="color: #ffb83c">Events</h2>
@@ -648,7 +756,7 @@
                     aria-labelledby="pills-categories-tab" tabindex="0">
                     <div class="row gy-4">
                         <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
-                            <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
+                            <div class="course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
                                 <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
                                     <a href="#" class="w-100 h-100">
                                         <img src="#" alt="#"
@@ -683,7 +791,7 @@
     <!-- ================================= testimonials Section Start ========================================= -->
 
     <!-- ================================= Blog Section Start ========================================= -->
-    <section class="blog py-120 mash-bg-main mash-bg-main-two position-relative" style="background-color: #0046bf">
+    <section id="awards" class="blog py-120 bg-white position-relative" style="background-color: #ffffff;">
         <div class="container">
             <div class="section-heading text-center">
                 <h2 class="mb-24 wow bounceIn" style="color: #ffb83c">Awards</h2>
@@ -725,11 +833,11 @@
     </section>
 
     <!-- ==================== Footer Start Here ==================== -->
-    <footer class="footer position-relative z-1" style="background-color: #0046bf">
-        <img src="assets/images/shapes/shape_after_light.png" alt=""
+    <footer class="footer position-relative z-1" style="background-color: #ffffff;">
+        <!-- <img src="assets/images/shapes/shape_after_light.png" alt=""
             class="shape four animation-scalation">
         <img src="assets/images/shapes/shape_after_light.png" alt=""
-            class="shape two animation-scalation">
+            class="shape two animation-scalation"> -->
 
         <div class="py-120 ">
             <div class="container container-two">
@@ -738,31 +846,32 @@
                         <div class="footer-item">
                             <div class="footer-item__logo">
                                 <a href="#">
-                                    <img src="assets/images/logo-light.png" alt="Logo">
+                                    <img src="assets/images/logo.png" alt="Logo">
                                 </a>
                             </div>
                             <!-- <p class="my-32">EduAll exceeded all my expectations! The instructors were not only experts</p> -->
                         </div>
                     </div>
+                    
                     <div class="col" data-aos="fade-up" data-aos-duration="800">
                         <div class="footer-item">
                             <h4 class="footer-item__title mb-32" style="color: #ffb83c">Contact Us</h4>
                             <div class="flex-align gap-20 mb-24">
                                 <span class="icon d-flex text-32 text-main-600"><i
-                                        class="ph ph-whatsapp-logo text-white"></i></span>
+                                        class="ph ph-whatsapp-logo" style="color: #333;"></i></span>
                                 <div class="">
                                     <a href="https://wa.me/62895421255536"
                                         target="_blank"
-                                        class="text-white d-block hover-text-main-600 mb-4">0895421255536</a>
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">0895421255536</a>
                                 </div>
                             </div>
 
                             <div class="flex-align gap-20 mb-24">
                                 <span class="icon d-flex text-32 text-main-600"><i
-                                        class="ph ph-envelope-open text-white"></i></span>
+                                        class="ph ph-envelope-open" style="color: #333;"></i></span>
                                 <div class="">
                                     <a href="#"
-                                        class="text-white d-block hover-text-main-600 mb-4">aftershine@gmail.com</a>
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">aftershine@gmail.com</a>
                                 </div>
                             </div>
                         </div>
@@ -773,19 +882,19 @@
                             <h4 class="footer-item__title mb-32"></h4>
                             <div class="flex-align gap-20 mb-24">
                                 <span class="icon d-flex text-32 text-main-600"><i
-                                        class="ph-bold ph-facebook-logo text-white"></i></span>
+                                        class="ph-bold ph-facebook-logo" style="color: #333;"></i></span>
                                 <div class="">
                                     <a href="https://www.facebook.com/share/1Abuvzhs96/?mibextid=wwXIfr" target="_blank"
-                                        class="text-white d-block hover-text-main-600 mb-4">Facebook</a>
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">Facebook</a>
                                 </div>
                             </div>
 
 
                             <div class="flex-align gap-20 mb-24">
-                                <span class="icon d-flex text-32 text-main-600"><i class="ph-bold ph-x-logo text-white"></i></span>
+                                <span class="icon d-flex text-32 text-main-600"><i class="ph-bold ph-x-logo" style="color: #333;"></i></span>
                                 <div class="">
                                     <a href="https://x.com/aftershineband?s=21" target="_blank"
-                                        class="text-white d-block hover-text-main-600 mb-4">X (Twitter)</a>
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">X (Twitter)</a>
                                 </div>
                             </div>
                         </div>
@@ -796,19 +905,19 @@
                             <h4 class="footer-item__title mb-32"></h4>
                             <div class="flex-align gap-20 mb-24">
                                 <span class="icon d-flex text-32 text-main-600"><i
-                                        class="ph-bold ph-instagram-logo text-white"></i></span>
+                                        class="ph-bold ph-instagram-logo" style="color: #333;"></i></span>
                                 <div class="">
                                     <a href="https://www.instagram.com/aftershine.official?igsh=MXFoaWkyM3YxZmFydw==" target="_blank"
-                                        class="text-white d-block hover-text-main-600 mb-4">Instagram</a>
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">Instagram</a>
                                 </div>
                             </div>
 
                             <div class="flex-align gap-20 mb-24">
                                 <span class="icon d-flex text-32 text-main-600"><i
-                                        class="ph-bold ph-tiktok-logo text-white"></i></span>
+                                        class="ph-bold ph-tiktok-logo" style="color: #333;"></i></span>
                                 <div class="">
                                     <a href="https://www.tiktok.com/@aftershineofficial?_r=1&_t=ZS-93TxdLQQGYf" target="_blank"
-                                        class="text-white d-block hover-text-main-600 mb-4">TikTok</a>
+                                        class="d-block hover-text-main-600 mb-4" style="color: #333;">TikTok</a>
                                 </div>
                             </div>
                         </div>
@@ -816,12 +925,12 @@
                 </div>
             </div>
         </div>
-        <div class="container" style="background-color: #0046bf">
+        <div class="container">
             <!-- bottom Footer -->
             <div class="bottom-footer border-top border-dashed border-main-100 border-0 py-32">
                 <div class="container container-two">
                     <div class="bottom-footer__inner flex-between gap-3 flex-wrap">
-                        <p class="bottom-footer__text text-white"> Copyright &copy; 2026 <span
+                        <p class="bottom-footer__text" style="color: #333;"> Copyright &copy; 2026 <span
                                 class="fw-semibold">Aftershine</span> All Rights
                             Reserved.</p>
                     </div>
@@ -868,5 +977,15 @@
 
     <!-- main js -->
     <script src="assets/js/main.js"></script>
+    <script>
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+          $('.header').addClass('scrolled');
+        } else {
+          $('.header').removeClass('scrolled');
+        }
+      });
+    </script>
   </body>
 </html>
+
